@@ -9,13 +9,13 @@ date = date.replace('/', '-')
 
 #更改前一天数据名称
 
-path = 'D:/Projects/Improving-dga-based-malicious-domain-classifiers-with-natural-language-procesing-master/'
+path = 'D:/Projects/'
 name_dga = str(path) +'dga.csv'
 new_name_dga = str(path) + 'dga' + str(date) + '.csv'
 if os.path.exists(name_dga):
     os.rename(name_dga, new_name_dga)
 
-path_dataset = 'D:/Projects/Improving-dga-based-malicious-domain-classifiers-with-natural-language-procesing-master/dataset/'
+path_dataset = 'D:/Projects/dataset/'
 name_families = str(path_dataset) + 'DGA-families'
 new_name_families = new_name_dga = str(path_dataset) + 'DGA-families' + str(date)
 if os.path.exists(name_families):
