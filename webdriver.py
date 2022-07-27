@@ -11,7 +11,7 @@ import datetime
 
 options = webdriver.ChromeOptions()
 prefs = {'profile.default_content_settings.popups': 0,
-         'download.default_directory': 'D:/Projects/Improving-dga-based-malicious-domain-classifiers-with-natural-language-procesing-master/'}
+         'download.default_directory': 'D:/Projects/'}
 options.add_experimental_option('prefs', prefs)
 # dga.txt下载到downloads中
 driver = webdriver.Chrome()
@@ -51,14 +51,12 @@ def move_file(src_path, dst_path, file):
 yesterday = datetime.datetime.now() + datetime.timedelta(-1)
 date = yesterday.strftime('%x')
 date= date.replace('/', '-')
-path = 'D:/Projects/Improving-dga-based-malicious-domain-classifiers-with-natural-language-procesing-master/'
+path = 'D:/Projects/'
 name = str(path) + 'dga.txt'
 new_name = str(path) + 'dga' + str(date) + '.txt'
 if os.path.exists(name):
     os.rename(name, new_name)
 
-move_file('C:/Users/zhw/Downloads/', path, 'dga.txt')
+move_file('C:/Users/Downloads/', path, 'dga.txt')
 
-os.system('python D:/Projects/Improving-dga-based-malicious-domain-classifiers-with-natural-language-procesing-master/txttocsv.py')
-
-os.system('python D:/Projects/Improving-dga-based-malicious-domain-classifiers-with-natural-language-procesing-master/test.py')
+os.system('python D:/Projects/txttocsv.py')
